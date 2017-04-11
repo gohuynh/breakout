@@ -1,0 +1,7 @@
+Welcome to Breakout!
+Use the left and right arrows to move the paddle
+Your balls can't hurt you
+Enemy balls can only hurt you
+Look out for power ups
+Your HP and the Boss's HP are displayed
+Have Fun!

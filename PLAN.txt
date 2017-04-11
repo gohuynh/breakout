@@ -1,0 +1,89 @@
+Breakout Plan
+Gordon Huynh (ghh6)
+CS 308
+1/14/2017
+
+After looking at the Breakout variants, the most interesting variant to me was Devilish. Personally
+I really enjoy RPG/adventure games and Devilish had a very nice adventure feel to it. For my project,
+I plan on making a Breakout RPG variant; where the player is not simply playing against themselves, but
+instead a boss for each level. Instead of lives, the player has a set amount of health points. The boss
+for each level also has health points and must be depleted for the player to win. In my variant, the
+player does not actually have to clear all the blocks, only kill the boss. For now, the player will have
+roughly 100 hp and the bosses will have hp that depend on the level the player is at such as: level 1 - 
+100 hp, level 2 - 200 hp, level 3 - 500 hp, level 4 - 1000 hp. The player will have specific balls that
+can only damage the boss and break up blocks. It cannot hurt the player. On the otherside, the boss will
+generate enemy balls that cannot hurt the boss, can go over blocks, and can damage the player. These balls
+represent minions that the boss sends to attack the player and thus also have hp which deplete after
+hitting a wall or bouncing off the player's paddle. These balls will disappear once their hp is gone and
+also have a chance of dropping a power up. To do damage the player's ball must hit the boss hitbox and
+vice versa for the boss. The entire bottom wall will be the player's location and "hitbox". On the
+top wall will be the boss's location and "hitbox". For each boss/level, I plan on also having critical
+points on the boss's wall that remain for the entire round that if hit, will do extra damage to the
+boss.
+
+Blocks in my game will be obstacles for only the player and serve to delay or hinder the player's
+attempts to attack the boss. For now, I have five block types in mind: normal, fire, ice, spawner, and
+invincible blocks. Normal blocks are the generic block that takes only one hit from a player ball to be
+destroyed. Fire blocks take 3 hits to be destroyed and when hit, causes the player's ball to catch on
+fire which speeds it up for a short duration. Conversely, ice blocks are the same but instead freezes
+the ball which causes it to slow down for it's duration. Spawner blocks take 5 hits to be destroyed and
+while active will spawn normal blocks around itself every set amount of time. Finally, invincible
+blocks are self explanatory and cannot be destroyed.
+
+Power ups that I want to include have a chance of spawning from destroyed blocks and a greater chance
+of spawning from enemy balls destroyed, but should still be infrequent. The power ups I plan on
+including include: shield, ally, magic and heal. Shields prevent damage to the player from the next 3
+hits from enemy balls. Ally will spawn an additional player ball. Magic will buff player balls that
+lasts until the ball hits the boss or blocks. The buff does extra damage to the boss or when the ball
+hits a block, the block will then damage surrounding blocks. Heal will simply heal the player an amount
+of hp without going over the initial 100.
+
+The only cheats I intend in including are cheats that immediately grant the player a specific power up,
+cheats that allow you to skip to a specific level, and a cheat to instant kill a boss.
+
+My levels are going to be a more progressive style that gradually introduce players to the mechanics of
+the game. For the first level, there will only be normal blocks and one critical point:
+
+ooooooooooxxxxoooooooooo
+
+------------------------
+------------------------
+------------------------
+------------------------
+
+       .
+        ____
+        
+o's being regular hit boxes, and x's being critical points
+
+Level 2 would introduce fire and ice blocks and they would be randomly spawned in with the normal blocks.
+
+oooooxoooooxxoooooxooooo
+
+---f------i-----f----f--
+i----i----------f-------
+----f-----i------i---f--
+-------f-----f----i-----
+
+           .
+         ____
+
+f's being fire blocks and i's being ice blocks
+
+Level 3 now includes spawner blocks and invincible blocks. It also has a more determined layout
+
+oooooxxooooooooooxxooooo
+
+          ====
+---f-----i-------i-----f
+==--f---f--ss-----i---==
+---i---------f-------i--
+
+                  .
+      ____
+      
+= being invincible blocks and s's being spawner blocks
+
+The final level would be something similar to Level 3, but with a more challenging layout.
+In addition to block layouts increasing in difficulty, critical points becoming harder to hit, and boss
+hp increasing; I am planning to have the rate at which the boss sends out balls to increase.
